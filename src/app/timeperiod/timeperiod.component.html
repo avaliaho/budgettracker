@@ -1,0 +1,118 @@
+<div class="row">
+  <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+    <div class="sidebar-sticky">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link" href="/incomeandexpenses">
+            <span data-feather="home"></span>
+            Income and expenses <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/monthlybudget">
+            <span data-feather="file"></span>
+            Monthly budgets
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/timeperiod">
+            <span data-feather="shopping-cart"></span>
+            Time period
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+    <div
+      class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+      <h1 class="h2">Time period</h1>
+    </div>
+
+    <form>
+      <div class="row">
+        <div class="col">
+          <label for="begin">Begin date</label>
+          <input type="datetime-local" [value]="beginDate" class="form-control"
+            (change)="beginDate=$event.target.value; getDatePeriod()" />
+        </div>
+        <div class="col">
+          <label for="end">End date</label>
+          <input type="datetime-local" [value]="endDate" class="form-control"
+            (change)="endDate=$event.target.value; getDatePeriod()" />
+        </div>
+      </div>
+    </form>
+
+    <div *ngIf="withinRange.length == []">
+      <br>
+      <p>No budgets were found. Try again with a wider date range.</p>
+    </div>
+
+    <div *ngIf="withinRange.length >= 1">
+      <br>
+      <table *ngFor="let budget of withinRange" class="table table-bordered">
+        <tbody>
+          <tr>
+            <th>Income</th>
+            <th>Amount</th>
+          </tr>
+          <tr>
+            <td></td>
+            <td>{{ budget.income }}</td>
+          </tr>
+          <tr>
+            <th>Expense type</th>
+            <th>Amount</th>
+          </tr>
+          <tr>
+            <td>Food</td>
+            <td>{{ budget.food }}</td>
+          </tr>
+          <tr>
+            <td>Drinks</td>
+            <td>{{ budget.drinks }}</td>
+          </tr>
+          <tr>
+            <td>Housing</td>
+            <td>{{ budget.housing }}</td>
+          </tr>
+          <tr>
+            <td>Bills</td>
+            <td>{{ budget.bills }}</td>
+          </tr>
+          <tr>
+            <td>Loans</td>
+            <td>{{ budget.loans }}</td>
+          </tr>
+          <tr>
+            <td>Travel</td>
+            <td>{{ budget.travel }}</td>
+          </tr>
+          <tr>
+            <td>Clothing</td>
+            <td>{{ budget.clothing }}</td>
+          </tr>
+          <tr>
+            <td>Insurances</td>
+            <td>{{ budget.insurances }}</td>
+          </tr>
+          <tr>
+            <td>Monthly</td>
+            <td>{{ budget.netflix }}</td>
+          </tr>
+          <tr>
+            <td>Hobby</td>
+            <td>{{ budget.hobby }}</td>
+          </tr>
+          <tr>
+            <td>Other</td>
+            <td>{{ budget.other }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </main>
+</div>

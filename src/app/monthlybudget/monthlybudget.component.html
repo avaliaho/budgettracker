@@ -1,0 +1,75 @@
+<div class="row">
+  <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+    <div class="sidebar-sticky">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link" href="/incomeandexpenses">
+            <span data-feather="home"></span>
+            Income and expenses <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/monthlybudget">
+            <span data-feather="file"></span>
+            Monthly budgets
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/timeperiod">
+            <span data-feather="shopping-cart"></span>
+            Time period
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+    <div
+      class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+      <h1 class="h2">Monthly budgets</h1>
+    </div>
+
+    <div *ngIf="budgets">
+      <table *ngFor="let budget of budgets" class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Food</th>
+            <th>Drinks</th>
+            <th>Housing</th>
+            <th>Bills</th>
+            <th>Loans</th>
+            <th>Travel</th>
+            <th>Clothing</th>
+            <th>Insuraces</th>
+            <th>Hobby</th>
+            <th>Other</th>
+            <th>Income</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ budget.food }}</td>
+            <td>{{ budget.drinks }}</td>
+            <td>{{ budget.housing }}</td>
+            <td>{{ budget.bills }}</td>
+            <td>{{ budget.loans }}</td>
+            <td>{{ budget.travel }}</td>
+            <td>{{ budget.clothing }}</td>
+            <td>{{ budget.insurances }}</td>
+            <td>{{ budget.hobby }}</td>
+            <td>{{ budget.other }}</td>
+            <td>{{ budget.income }}</td>
+            <td>{{ budget.date | date }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div *ngIf="!budgets">
+      <p>There are no budgets yet. Create a new budget in the 'Income and expenses' section.</p>
+    </div>
+
+  </main>
+</div>
