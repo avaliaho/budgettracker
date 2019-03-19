@@ -16,6 +16,24 @@ export class BudgetService {
           return budget;
         }
       }
+    } else {
+      let month = {
+        month: new Date().getMonth(),
+        income: 0,
+        food: 0,
+        drinks: 0,
+        housing: 0,
+        bills: 0,
+        loans: 0,
+        travel: 0,
+        clothing: 0,
+        insurances: 0,
+        netflix: 0,
+        hobby: 0,
+        other: 0,
+        date: new Date().getTime()
+      } as budget;
+      return month;
     }
   }
 

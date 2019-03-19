@@ -43,16 +43,16 @@
     <p class="lead">All drink expenses in a month coming from coffee, alcohol, juices, soda etc.
       Water bill can be added to the "mandatory bills" category.</p>
     <div class="form-group">
-      <input type="range" [(ngModel)]="budget.drinks" class="form-control-range slider" min="1" max="5000" value="50" id="drinkinput"
-        oninput="drinkoutput.value = drinkinput.value">
+      <input type="range" [(ngModel)]="budget.drinks" class="form-control-range slider" min="1" max="5000" value="50"
+        id="drinkinput" oninput="drinkoutput.value = drinkinput.value">
       <output id="drinkoutput">{{ budget.drinks }}</output>€
     </div>
 
     <h3>Housing costs in a month</h3>
     <p class="lead">Rents and other housing costs that do not fit into other sections.</p>
     <div class="form-group">
-      <input type="range"  [(ngModel)]="budget.housing" class="form-control-range slider" min="1" max="5000" value="50" id="housinginput"
-        oninput="housingoutput.value = housinginput.value">
+      <input type="range" [(ngModel)]="budget.housing" class="form-control-range slider" min="1" max="5000" value="50"
+        id="housinginput" oninput="housingoutput.value = housinginput.value">
       <output id="housingoutput">{{ budget.housing }}</output>€
     </div>
 
@@ -62,32 +62,32 @@
       normal invoice amount by the billing interval,
       ie if the water bill is billed every 6 months, divide the expected amount by 6.</p>
     <div class="form-group">
-      <input type="range"  [(ngModel)]="budget.mandatory" class="form-control-range slider" min="1" max="5000" value="50" id="mandatoryinput"
-        oninput="mandatoryoutput.value = mandatoryinput.value">
-      <output id="mandatoryoutput">{{ budget.mandatory }}</output>€
+      <input type="range" [(ngModel)]="budget.bills" class="form-control-range slider" min="1" max="5000" value="50"
+        id="billsinput" oninput="billsoutput.value = billsinput.value">
+      <output id="mandatoryoutput">{{ budget.bills }}</output>€
     </div>
 
     <h3>Loans and installments</h3>
     <p class="lead">The total monthly amount of all loans, installments and similar expenses.</p>
     <div class="form-group">
-      <input type="range"  [(ngModel)]="budget.loans" class="form-control-range slider" min="1" max="5000" value="50" id="loansinput"
-        oninput="loansoutput.value = loansinput.value">
+      <input type="range" [(ngModel)]="budget.loans" class="form-control-range slider" min="1" max="5000" value="50"
+        id="loansinput" oninput="loansoutput.value = loansinput.value">
       <output id="loansoutput">{{ budget.loans }}</output>€
     </div>
 
     <h3>Travel expenses in a month</h3>
     <p class="lead">Fuel, buss tickets, travel cards and so on.</p>
     <div class="form-group">
-      <input type="range" [(ngModel)]="budget.travel" class="form-control-range slider" min="1" max="5000" value="50" id="travelinput"
-        oninput="traveloutput.value = travelinput.value">
+      <input type="range" [(ngModel)]="budget.travel" class="form-control-range slider" min="1" max="5000" value="50"
+        id="travelinput" oninput="traveloutput.value = travelinput.value">
       <output id="traveloutput">{{ budget.travel }}</output>€
     </div>
 
     <h3>Clothing</h3>
     <p class="lead">Average amount of clothing and accessories per budget.</p>
     <div class="form-group">
-      <input type="range" [(ngModel)]="budget.clothing" class="form-control-range slider" min="1" max="5000" value="50" id="clothinginput"
-        oninput="clothingoutput.value = clothinginput.value">
+      <input type="range" [(ngModel)]="budget.clothing" class="form-control-range slider" min="1" max="5000" value="50"
+        id="clothinginput" oninput="clothingoutput.value = clothinginput.value">
       <output id="clothingoutput">{{ budget.clothing }}</output>€
     </div>
 
@@ -95,9 +95,9 @@
     <p class="lead">If the billing interval is less than a month, divide the amount by the billing
       interval, that is, for example, once a year for billable insurance with 12.</p>
     <div class="form-group">
-      <input type="range" [(ngModel)]="budget.insurance" class="form-control-range slider" min="1" max="5000" value="50" id="insuranceinput"
-        oninput="insuranceoutput.value = insuranceinput.value">
-      <output id="insuranceoutput">{{ budget.insurance }}</output>€
+      <input type="range" [(ngModel)]="budget.insurances" class="form-control-range slider" min="1" max="5000"
+        value="50" id="insurancesinput" oninput="insurancesoutput.value = insurancesinput.value">
+      <output id="insuranceoutput">{{ budget.insurances }}</output>€
     </div>
 
     <h3>Monthly payment programs and services</h3>
@@ -105,8 +105,8 @@
       once a month, divide the amount by the billing interval, that is, for example, for an annual
       fee program of 12.</p>
     <div class="form-group">
-      <input type="range" [(ngModel)]="budget.neflix" class="form-control-range slider" min="1" max="5000" value="50" id="netflixinput"
-        oninput="netflixoutput.value = netflixinput.value">
+      <input type="range" [(ngModel)]="budget.netflix" class="form-control-range slider" min="1" max="5000" value="50"
+        id="netflixinput" oninput="netflixoutput.value = netflixinput.value">
       <output id="netflixoutput">{{ budget.netflix }}</output>€
     </div>
 
@@ -115,8 +115,8 @@
       expenses occur less than once a month, then divide the amount by the monthly interval,
       ie for the one-time hobby fee and divide the amount by 12.</p>
     <div class="form-group">
-      <input type="range" [(ngModel)]="budget.hobby" class="form-control-range slider" min="1" max="5000" value="50" id="hobbyinput"
-        oninput="hobbyoutput.value = hobbyinput.value">
+      <input type="range" [(ngModel)]="budget.hobby" class="form-control-range slider" min="1" max="5000" value="50"
+        id="hobbyinput" oninput="hobbyoutput.value = hobbyinput.value">
       <output id="hobbyoutput">{{ budget.hobby }}</output>€
     </div>
 
@@ -126,17 +126,17 @@
       a month, divide the amount by the monthly interval, ie if you pay for a program once a year,
       then divide the amount by 12.</p>
     <div class="form-group">
-      <input type="range" [(ngModel)]="budget.other" class="form-control-range slider" min="1" max="5000" value="50" id="otherinput"
-        oninput="otheroutput.value = otherinput.value">
+      <input type="range" [(ngModel)]="budget.other" class="form-control-range slider" min="1" max="5000" value="50"
+        id="otherinput" oninput="otheroutput.value = otherinput.value">
       <output id="otheroutput">{{ budget.other }}</output>€
     </div>
 
     <h3>Income per month</h3>
-    <p class="lead">Total income remaining after taxes and other possible deductions 
+    <p class="lead">Total income remaining after taxes and other possible deductions
       (eg withdrawal). Salaries, benefits, subsidies, weekly wages, etc.</p>
     <div class="form-group">
-      <input type="range" [(ngModel)]="budget.income" class="form-control-range slider" min="1" max="5000" value="50" id="incomeinput"
-        oninput="incomeoutput.value = incomeinput.value">
+      <input type="range" [(ngModel)]="budget.income" class="form-control-range slider" min="1" max="5000" value="50"
+        id="incomeinput" oninput="incomeoutput.value = incomeinput.value">
       <output id="incomeoutput">{{ budget.income }}</output>€
     </div>
 
