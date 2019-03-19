@@ -10,6 +10,8 @@ import { MonthlybudgetComponent } from './monthlybudget/monthlybudget.component'
 import { TimeperiodComponent } from './timeperiod/timeperiod.component';
 import { BudgetService } from '../app/budget.service';
 
+import { FeatherModule } from 'ngx-feather-icon';
+
 let appRoutes: Routes = [
   { path: 'incomeandexpenses', component: IncomeandexpensesComponent },
   { path: 'monthlybudget', component: MonthlybudgetComponent },
@@ -28,7 +30,8 @@ let appRoutes: Routes = [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    FeatherModule
   ],
   providers: [BudgetService],
   bootstrap: [AppComponent]

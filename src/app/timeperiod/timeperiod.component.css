@@ -134,3 +134,7 @@ body {
   output {
       margin-top: 10px;
   }
+
+  ul {
+    margin-top: 16px !important;
+  }

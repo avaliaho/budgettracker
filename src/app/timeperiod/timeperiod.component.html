@@ -11,7 +11,7 @@
         <li class="nav-item">
           <a class="nav-link" href="/monthlybudget">
             <span data-feather="file"></span>
-            Monthly budgets
+            My budgets
           </a>
         </li>
         <li class="nav-item">
@@ -54,11 +54,15 @@
 
       <br>
 
-      <ul class="list-group">
-        <li class="list-group-item">Total income: {{ totalIncome }} €</li>
-        <li class="list-group-item">Total expenses: {{ totalExpenses }}</li>
-        <li class="list-group-item">Balance: {{ totalIncome - totalExpenses }} €</li>
-      </ul>
+      <div class="card">
+        <div class="card-body">
+          <ul>
+            <li>Total income: {{ totalIncome }} €</li>
+            <li>Total expenses: {{ totalExpenses }} €</li>
+            <li>Balance: {{ totalIncome - totalExpenses }} €</li>
+          </ul>
+        </div>
+      </div>
 
     </div>
 
