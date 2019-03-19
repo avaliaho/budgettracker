@@ -4,20 +4,20 @@
       <ul class="nav flex-column">
         <li class="nav-item">
           <a class="nav-link" href="/incomeandexpenses">
-            <span data-feather="home"></span>
+            <img src="../../assets/euro_symbol.png">
             Income and expenses <span class="sr-only">(current)</span>
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="/monthlybudget">
-            <span data-feather="file"></span>
+            <img src="../../assets/file_copy.png">
             My budgets
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/timeperiod">
-            <span data-feather="shopping-cart"></span>
-            Time period
+            <img src="../../assets//access_time.png">
+            Date range
           </a>
         </li>
       </ul>
@@ -38,6 +38,9 @@
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">{{ budget.date | date }}</h5>
+
+          <canvas id="myChart" style="margin-bottom: 12px;" width="800" height="250px" #mychart></canvas>
+
           <table class="table">
             <thead>
               <tr>
@@ -56,17 +59,17 @@
             </thead>
             <tbody>
               <tr>
-                <td>{{ budget.food }}€</td>
-                <td>{{ budget.drinks }}€</td>
-                <td>{{ budget.housing }}€</td>
-                <td>{{ budget.bills }}€</td>
-                <td>{{ budget.loans }}€</td>
-                <td>{{ budget.travel }}€</td>
-                <td>{{ budget.clothing }}€</td>
-                <td>{{ budget.insurances }}€</td>
-                <td>{{ budget.hobby }}€</td>
-                <td>{{ budget.other }}€</td>
-                <td>{{ budget.income }}€</td>
+                <td class="red">{{ budget.food }}€</td>
+                <td class="red">{{ budget.drinks }}€</td>
+                <td class="red">{{ budget.housing }}€</td>
+                <td class="red">{{ budget.bills }}€</td>
+                <td class="red">{{ budget.loans }}€</td>
+                <td class="red">{{ budget.travel }}€</td>
+                <td class="red">{{ budget.clothing }}€</td>
+                <td class="red">{{ budget.insurances }}€</td>
+                <td class="red">{{ budget.hobby }}€</td>
+                <td class="red">{{ budget.other }}€</td>
+                <td class="green">{{ budget.income }}€</td>
               </tr>
             </tbody>
           </table>

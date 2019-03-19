@@ -134,3 +134,11 @@ body {
   output {
       margin-top: 10px;
   }
+
+  .red {
+    color: red;
+  }
+
+  .green {
+    color: green;
+  }
