@@ -5,7 +5,42 @@ import { budget } from './budget.interface';
 @Injectable()
 export class BudgetService {
 
-  constructor(private http: HttpClient) { }
+  month: budget[] = [{
+    month: 1,
+    income: 1000,
+    food: 150,
+    drinks: 0,
+    housing: 552,
+    bills: 80,
+    loans: 0,
+    travel: 0,
+    clothing: 0,
+    insurances: 0,
+    netflix: 10,
+    hobby: 0,
+    other: 0,
+    date: 1550224800000
+  },
+  {
+    month: 2,
+    income: 1000,
+    food: 150,
+    drinks: 0,
+    housing: 552,
+    bills: 80,
+    loans: 0,
+    travel: 0,
+    clothing: 0,
+    insurances: 0,
+    netflix: 10,
+    hobby: 0,
+    other: 0,
+    date: 1552993553295
+  }];
+
+  constructor(private http: HttpClient) {
+    localStorage.setItem("budgets", JSON.stringify(this.month))
+  }
 
   getMonth = (month: number): budget => {
     let budgets: budget[] = JSON.parse(localStorage.getItem("budgets"));

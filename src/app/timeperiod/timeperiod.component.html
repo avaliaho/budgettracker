@@ -51,67 +51,15 @@
     </div>
 
     <div *ngIf="withinRange.length >= 1">
+
       <br>
-      <table *ngFor="let budget of withinRange" class="table table-bordered">
-        <tbody>
-          <tr>
-            <th>Income</th>
-            <th>Amount</th>
-          </tr>
-          <tr>
-            <td></td>
-            <td>{{ budget.income }}</td>
-          </tr>
-          <tr>
-            <th>Expense type</th>
-            <th>Amount</th>
-          </tr>
-          <tr>
-            <td>Food</td>
-            <td>{{ budget.food }}</td>
-          </tr>
-          <tr>
-            <td>Drinks</td>
-            <td>{{ budget.drinks }}</td>
-          </tr>
-          <tr>
-            <td>Housing</td>
-            <td>{{ budget.housing }}</td>
-          </tr>
-          <tr>
-            <td>Bills</td>
-            <td>{{ budget.bills }}</td>
-          </tr>
-          <tr>
-            <td>Loans</td>
-            <td>{{ budget.loans }}</td>
-          </tr>
-          <tr>
-            <td>Travel</td>
-            <td>{{ budget.travel }}</td>
-          </tr>
-          <tr>
-            <td>Clothing</td>
-            <td>{{ budget.clothing }}</td>
-          </tr>
-          <tr>
-            <td>Insurances</td>
-            <td>{{ budget.insurances }}</td>
-          </tr>
-          <tr>
-            <td>Monthly</td>
-            <td>{{ budget.netflix }}</td>
-          </tr>
-          <tr>
-            <td>Hobby</td>
-            <td>{{ budget.hobby }}</td>
-          </tr>
-          <tr>
-            <td>Other</td>
-            <td>{{ budget.other }}</td>
-          </tr>
-        </tbody>
-      </table>
+
+      <ul class="list-group">
+        <li class="list-group-item">Total income: {{ totalIncome }} €</li>
+        <li class="list-group-item">Total expenses: {{ totalExpenses }}</li>
+        <li class="list-group-item">Balance: {{ totalIncome - totalExpenses }} €</li>
+      </ul>
+
     </div>
 
   </main>
